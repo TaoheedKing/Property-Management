@@ -1,0 +1,199 @@
+<Project>
+  <Name>assingment4</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Untitled</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Plot</Name>
+        <Access>Public</Access>
+        <Location left="49" top="1081" />
+        <Size width="219" height="400" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int x</Member>
+        <Member type="Field">private int y</Member>
+        <Member type="Field">private int width</Member>
+        <Member type="Field">private int depth</Member>
+        <Member type="Constructor">public Plot()</Member>
+        <Member type="Constructor">public Plot(Plot p)</Member>
+        <Member type="Constructor">public Plot(int x, int y, int width, int depth)</Member>
+        <Member type="Method">public boolean overlaps(Plot plot)</Member>
+        <Member type="Method">public boolean encompasses(Plot plot)</Member>
+        <Member type="Method">public void setx(int x)</Member>
+        <Member type="Method">public int getX()</Member>
+        <Member type="Method">public void setY(int y)</Member>
+        <Member type="Method">public int getY(int y)</Member>
+        <Member type="Method">public void setWidth(int width)</Member>
+        <Member type="Method">public int getWidth()</Member>
+        <Member type="Method">public void setDepth(int depth)</Member>
+        <Member type="Method">public int getDepth()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Managment_Company</Name>
+        <Access>Public</Access>
+        <Location left="49" top="93" />
+        <Size width="551" height="417" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int MAX_PROPERTY</Member>
+        <Member type="Field">private double mgmFeePer</Member>
+        <Member type="Field">private String name</Member>
+        <Member type="Field">private property properties</Member>
+        <Member type="Field">private String taxID</Member>
+        <Member type="Field">private int MAX_WIDTH</Member>
+        <Member type="Field">private int MAX_DEPTH</Member>
+        <Member type="Field">private plot plot</Member>
+        <Member type="Constructor">public Managment_Company()</Member>
+        <Member type="Constructor">public Managment_Company(String name, String taxID, double mgmFee)</Member>
+        <Member type="Constructor">public Managment_Company(ManagementCompany otherCompany)</Member>
+        <Member type="Method">public int addProperty(Property property)</Member>
+        <Member type="Method">public int addProperty(String name, String city, double rent, String owner)</Member>
+        <Member type="Method">public int addProperty(String name, String city, double rent, String owner, int x, int y, int width, int depth)</Member>
+        <Member type="Method">public String displayPropertyAtIndex(int i)</Member>
+        <Member type="Method">public int getMAX_PROPERTY()</Member>
+        <Member type="Method">public int maxPropertyRent()</Member>
+        <Member type="Method">public int maxPropertyRentIndex()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Member type="Method">public double totalRent()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Property</Name>
+        <Access>Public</Access>
+        <Location left="31" top="627" />
+        <Size width="645" height="400" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String City</Member>
+        <Member type="Field">private String owner</Member>
+        <Member type="Field">private String propertyName</Member>
+        <Member type="Field">private double rentAmount</Member>
+        <Member type="Field">private Plot plot</Member>
+        <Member type="Constructor">public Property()</Member>
+        <Member type="Constructor">public Property(property p)</Member>
+        <Member type="Constructor">public Property(String propertyName, String city, double rentAmount, java.lang.String owner)</Member>
+        <Member type="Constructor">public Property(String propertyName, String city, double rentAmount, java.lang.String owner, int x, int y, int width, int depth)</Member>
+        <Member type="Method">public String getCity()</Member>
+        <Member type="Method">public String getOwner()</Member>
+        <Member type="Method">public String getPropertyName()</Member>
+        <Member type="Method">public double getRentAmount()</Member>
+        <Member type="Method">public plot setPlot(int x, int y, int width, int depth)</Member>
+        <Member type="Method">public void setCity(String city)</Member>
+        <Member type="Method">public void setOwner(String owner)</Member>
+        <Member type="Method">public void setPropertyName(String propertyName)</Member>
+        <Member type="Method">public void setRentAmount(double rentAmount)</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Comment">
+        <Text>                                      PSUEDO CODE FOR Managemnt_Company
+
+
+addProperty #2-Adds the property object to the "properties" array.
+
+addProperty#3-Creates a property object with a default plot and adds it to the "properties" array.
+
+addProperty #4- Creates a property object and adds it to the "properties" array.
+
+displayPropertyAtIndex- Displays the information of the property at index i
+
+getMAX_PROPERTY: Return the MAX_PROPERTY constant that represent the size of the "properties" array.
+
+
+maxPropertyRent: This method finds the maximum rent amount.
+
+maxPropertyRentIndex: This method finds the index of the property with the maximum rent amount.
+
+toString: Displays the information of all the properties in the "properties" array.
+
+totalRent: This method accesses each "Property" object within the array "properties" and sums up the property rent and returns the total amount.
+</Text>
+        <Location left="639" top="93" />
+        <Size width="436" height="421" />
+      </Entity>
+      <Entity type="Comment">
+        <Text>                                      PSUEDO CODE FOR Property
+
+
+Property #1: No-arg Constructor, creates a new object with default values of empty strings, 0 for rent amount, and default Plot
+
+Property #2:   Copy Constructor, creates a new object using the information of the object passed to it.
+
+Property #3: Parameterized Constructor, no Plot information provided
+
+Property #4: Constructor, Parameterized constructor
+
+Get City: return city
+
+Get Owner: return owner
+
+Get Property Name: return property name
+
+Get Rent Amount: return rent amount
+
+Set Plot: set the Plot values and return the Plot instance
+
+Set City: set the city
+
+Set Owner: set the owner name
+
+Set Property Name: set the property name
+
+Set Rent Amount: set the rent amount
+
+To String: Prints out the name, city, owner and rent amount for a property. </Text>
+        <Location left="711" top="602" />
+        <Size width="386" height="465" />
+      </Entity>
+      <Entity type="Comment">
+        <Text>                                     PSUEDO CODE for Plot
+
+Plot #1: No-arg Constructor, creates a default Plot with args x=0, y=0, width=1, depth=1
+
+Plot #2: Copy Constructor, creates a new object using the information of the object passed to it.
+
+Plot #3: Parameterized Constructor
+
+Overlaps: determines if this plot overlaps the parameter
+
+Encompasses: determines if this plot encompasses the parameter
+
+Set X: set x value
+
+Get X: return x value
+
+Set Y: set y value
+
+Get Y: return y value
+
+Set Width: set width
+
+Get Width: return width
+
+Set Depth: set depth
+
+Get Depth: return depth
+
+To String: Prints the X,Y of the upper left corner, the width and the depth. </Text>
+        <Location left="354" top="1110" />
+        <Size width="363" height="462" />
+      </Entity>
+      <Entity type="Comment">
+        <Text>
+TAOHEED KING UML DIAGRAM/ PSUEDO CODE- ASSIGNMENT #4</Text>
+        <Location left="442" top="21" />
+        <Size width="366" height="62" />
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Dependency" first="1" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="2" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
