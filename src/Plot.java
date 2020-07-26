@@ -23,10 +23,10 @@ public class Plot {
 	}
 	/**
 	 * 
-	 * @param x
-	 * @param y
-	 * @param width
-	 * @param depth
+	 * @param x represents the x
+	 * @param y represents the y
+	 * @param width represents the width
+	 * @param depth represents the depth
 	 */
 	public Plot(int x, int y, int width, int depth) {
 		this.x= x;
@@ -36,7 +36,7 @@ public class Plot {
 	}
 	/**
 	 * 
-	 * @param plot
+	 * @param plot represents the plot
 	 * @return true or false
 	 */
 	public boolean overlaps(Plot plot) {
